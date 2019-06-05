@@ -19,7 +19,7 @@ class App < Sinatra::Base
   end 
   
   get "/multiply/:num1/:num2" do
-    @num1 = params[:num1].to_i #to_i makes it not hard coded?
+    @num1 = params[:num1].to_i #to_i makes it not a string 36 vs"36"
     @num2 = params[:num2].to_i
     "#{@num1 * @num2}"
   end
